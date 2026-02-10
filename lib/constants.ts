@@ -4,7 +4,7 @@ export const SITE_CONFIG = {
   description:
     "SecondDraft Digital rebuilds and creates websites for businesses. We offer website creation and premium hosting with global performance and enterprise security.",
   url: "https://seconddraft.digital",
-  email: "hello@seconddraft.digital",
+  email: "seconddraftdigital@outlook.com",
   phone: "",
   links: {
     home: "/",
@@ -26,7 +26,7 @@ export const SERVICES = {
     shortDescription:
       "Modern, responsive websites built with the latest technologies.",
     description:
-      "We design and build websites that look great and perform brilliantly. From small business sites to more complex projects, we deliver SEO-optimised, mobile-first experiences.",
+      "We design and build websites that look great and perform brilliantly. Whether you need a new site from scratch, a rebuild of an outdated one, or a redesign that keeps your content but gives you a fresh look, we deliver SEO-optimised, mobile-first experiences on a clear timeline with no surprises.",
   },
   hosting: {
     title: "Premium Hosting",
@@ -36,6 +36,39 @@ export const SERVICES = {
       "Your site deserves infrastructure that keeps it fast and online. We provide global content delivery, automatic SSL, and 99.99% uptime so you can focus on your business.",
   },
 } as const;
+
+export const CREATION_FEATURES = [
+  {
+    title: "Responsive design",
+    description:
+      "Your site looks and works great on every device: desktop, tablet, and mobile with one codebase.",
+  },
+  {
+    title: "SEO from day one",
+    description:
+      "Clean structure, fast loading, and sensible meta setup so search engines can find you from launch.",
+  },
+  {
+    title: "Fast performance",
+    description:
+      "Built with modern tooling and optimised assets so your pages load quickly and keep visitors engaged.",
+  },
+  {
+    title: "Clear timeline & deliverables",
+    description:
+      "We agree scope and milestones up front. You know what you're getting and when it will be ready.",
+  },
+  {
+    title: "Rebuilds & redesigns",
+    description:
+      "Already have a site that's outdated or hard to manage? We can rebuild it on a solid foundation without losing your content or branding.",
+  },
+  {
+    title: "Content updates & handover",
+    description:
+      "We show you how to update key content yourself, or can include a handover session and simple documentation.",
+  },
+] as const;
 
 export const HOSTING_BENEFITS = [
   {
@@ -112,8 +145,8 @@ export const SERVICE_INTEREST_OPTIONS = [
 
 export const BUDGET_OPTIONS = [
   "Not sure yet",
-  "Under £1,000",
-  "£1,000 - £2,500",
-  "£2,500 - £5,000",
-  "£5,000+",
+  "Under £500",
+  "£500 - £1,000",
+  "£1,000 - £2,000",
+  "£2,000+",
 ] as const;

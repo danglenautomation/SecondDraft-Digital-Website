@@ -10,7 +10,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[var(--slate)]/10 to-[var(--secondary)]/10 py-16 lg:py-24">
+      <section className="bg-[var(--slate)]/5 py-16 lg:py-24">
         <Container>
           <motion.div
             initial={fadeInUp.initial}

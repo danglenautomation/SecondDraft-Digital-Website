@@ -3,13 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
-  /* SecondDraft Digital - Bold & Creative */
-  --primary: #2563eb;
+  /* SecondDraft Digital - Cohesive, professional */
+  --primary: #1e40af;
   --primary-hover: #1d4ed8;
-  --secondary: #9333ea;
-  --secondary-hover: #7e22ce;
-  --accent: #f97316;
-  --accent-hover: #ea580c;
+  --secondary: #334155;
+  --secondary-hover: #475569;
+  --accent: #1e40af;
+  --accent-hover: #1d4ed8;
   --slate: #0f172a;
   --slate-light: #1e293b;
   --muted: #64748b;

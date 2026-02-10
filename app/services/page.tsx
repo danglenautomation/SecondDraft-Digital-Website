@@ -6,24 +6,17 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import {
   SERVICES,
+  CREATION_FEATURES,
   HOSTING_FEATURES_SERVICES,
   PROCESS_STEPS,
 } from "@/lib/constants";
 import { staggerContainer, staggerItem, fadeInUp } from "@/lib/animations";
 
-const creationFeatures = [
-  "Modern, responsive designs",
-  "Custom development with latest technologies",
-  "SEO-optimized from day one",
-  "Mobile-first approach",
-  "Fast turnaround times",
-];
-
 export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[var(--slate)]/10 to-[var(--secondary)]/10 py-16 lg:py-24">
+      <section className="bg-[var(--slate)]/5 py-16 lg:py-24">
         <Container>
           <motion.div
             initial={fadeInUp.initial}
@@ -50,7 +43,7 @@ export default function ServicesPage() {
             whileInView="animate"
             viewport={{ once: true, margin: "-80px" }}
             variants={staggerContainer}
-            className="grid gap-12 lg:grid-cols-2 lg:items-center"
+            className="grid gap-12 lg:grid-cols-2 lg:items-start"
           >
             <motion.div variants={staggerItem}>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -59,17 +52,6 @@ export default function ServicesPage() {
               <p className="mt-4 text-lg text-[var(--muted)]">
                 {SERVICES.creation.description}
               </p>
-              <ul className="mt-6 space-y-3">
-                {creationFeatures.map((feature) => (
-                  <li
-                    key={feature}
-                    className="flex items-center gap-2 text-[var(--foreground)]"
-                  >
-                    <span className="h-2 w-2 rounded-full bg-[var(--primary)]" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
               <div className="mt-8">
                 <Button href="/contact" variant="primary" size="lg">
                   Get a Quote
@@ -78,7 +60,7 @@ export default function ServicesPage() {
             </motion.div>
             <motion.div
               variants={staggerItem}
-              className="rounded-2xl bg-gradient-to-br from-[var(--primary)]/10 to-[var(--secondary)]/10 p-8 lg:p-12"
+              className="rounded-2xl bg-[var(--primary)]/5 border border-[var(--border)] p-8 lg:p-12"
             >
               <div className="text-6xl font-bold text-[var(--primary)]/20 lg:text-8xl">
                 01
@@ -87,6 +69,34 @@ export default function ServicesPage() {
                 From concept to launch
               </p>
             </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={staggerContainer}
+            className="mt-16"
+          >
+            <h3 className="text-xl font-bold text-[var(--foreground)]">
+              What you get
+            </h3>
+            <p className="mt-2 text-[var(--muted)]">
+              Every website we build includes the following so you get a solid,
+              maintainable result.
+            </p>
+            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {CREATION_FEATURES.map((feature) => (
+                <motion.div key={feature.title} variants={staggerItem}>
+                  <Card className="h-full">
+                    <h4 className="font-bold">{feature.title}</h4>
+                    <p className="mt-2 text-sm text-[var(--muted)]">
+                      {feature.description}
+                    </p>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </Container>
       </section>
@@ -140,7 +150,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="mt-12 text-center"
           >
-            <Button href="/contact" variant="secondary" size="lg">
+            <Button href="/contact" variant="primary" size="lg">
               Discuss Hosting
             </Button>
           </motion.div>
@@ -197,7 +207,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] py-16 text-white">
+      <section className="bg-[var(--primary)] py-16 text-white">
         <Container>
           <motion.div
             initial={fadeInUp.initial}
@@ -213,12 +223,7 @@ export default function ServicesPage() {
               hours.
             </p>
             <div className="mt-8">
-              <Button
-                href="/contact"
-                variant="accent"
-                size="lg"
-                className="bg-white text-[var(--primary)] hover:bg-white/90"
-              >
+              <Button href="/contact" variant="inverse" size="lg">
                 Contact Us
               </Button>
             </div>

@@ -1,6 +1,6 @@
 # SecondDraft Digital Website
 
-Professional marketing site for SecondDraft Digital — website creation and hosting for small businesses. Built with Next.js 16, TypeScript, Tailwind CSS, and Framer Motion.
+Professional marketing site for SecondDraft Digital - website creation and hosting for small businesses. Built with Next.js 16, TypeScript, Tailwind CSS, and Framer Motion.
 
 ## Setup
 

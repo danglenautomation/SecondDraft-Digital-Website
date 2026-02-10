@@ -21,7 +21,7 @@ export function CTA({
   secondaryHref = "/services",
 }: CTASectionProps) {
   return (
-    <section className="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] py-16 text-white lg:py-20">
+    <section className="bg-[var(--primary)] py-16 text-white lg:py-20">
       <Container>
         <motion.div
           initial={fadeInUp.initial}
@@ -35,12 +35,7 @@ export function CTA({
           </h2>
           <p className="mt-4 text-lg text-white/90">{subtitle}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button
-              href="/contact"
-              variant="accent"
-              size="lg"
-              className="bg-white text-[var(--primary)] hover:bg-white/90"
-            >
+            <Button href="/contact" variant="inverse" size="lg">
               {primaryLabel}
             </Button>
             <Button

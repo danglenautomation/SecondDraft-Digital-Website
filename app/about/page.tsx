@@ -35,7 +35,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[var(--slate)]/10 to-[var(--secondary)]/10 py-16 lg:py-24">
+      <section className="bg-[var(--slate)]/5 py-16 lg:py-24">
         <Container>
           <motion.div
             initial={fadeInUp.initial}
@@ -70,13 +70,13 @@ export default function AboutPage() {
               <p className="mt-4 text-lg text-[var(--muted)]">
                 SecondDraft Digital was founded on a simple belief: every
                 business deserves a website that actually works. Too many sites
-                are slow, outdated, or never quite finished—the &quot;first
-                draft&quot; that never got a proper second pass.
+                are slow, outdated, or never quite finished the &quot;first
+                draft&quot;.
               </p>
               <p className="mt-4 text-lg text-[var(--muted)]">
                 We specialise in taking existing or outdated websites and
                 transforming them into fast, modern, professional experiences. Or
-                we build you something new from scratch—either way, you get a
+                we build you something new from scratch, either way, you get a
                 site that looks great and works even better.
               </p>
             </motion.div>
@@ -158,7 +158,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] py-16 text-white">
+      <section className="bg-[var(--primary)] py-16 text-white">
         <Container>
           <motion.div
             initial={fadeInUp.initial}
@@ -173,12 +173,7 @@ export default function AboutPage() {
               Tell us about your project. We typically respond within 24 hours.
             </p>
             <div className="mt-8">
-              <Button
-                href="/contact"
-                variant="accent"
-                size="lg"
-                className="bg-white text-[var(--primary)] hover:bg-white/90"
-              >
+              <Button href="/contact" variant="inverse" size="lg">
                 Get in Touch
               </Button>
             </div>

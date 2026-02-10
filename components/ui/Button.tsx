@@ -4,7 +4,7 @@ import Link from "next/link";
 import { type ReactNode } from "react";
 import { motion } from "framer-motion";
 
-type Variant = "primary" | "secondary" | "accent" | "outline" | "ghost";
+type Variant = "primary" | "secondary" | "accent" | "inverse" | "outline" | "ghost";
 type Size = "sm" | "md" | "lg";
 
 interface ButtonBaseProps {
@@ -36,6 +36,8 @@ const variantStyles: Record<Variant, string> = {
     "bg-[var(--secondary)] text-white hover:bg-[var(--secondary-hover)] shadow-lg shadow-[var(--secondary)]/25",
   accent:
     "bg-[var(--accent)] text-white hover:bg-[var(--accent-hover)] shadow-lg shadow-[var(--accent)]/25",
+  inverse:
+    "bg-white text-[var(--primary)] hover:bg-white/90 shadow-md border border-[var(--border)] focus:ring-white/50",
   outline:
     "border-2 border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white",
   ghost:
