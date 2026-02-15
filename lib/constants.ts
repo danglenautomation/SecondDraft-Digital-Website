@@ -1,9 +1,14 @@
+const siteUrl =
+  typeof process !== "undefined" && process.env.NEXT_PUBLIC_SITE_URL
+    ? process.env.NEXT_PUBLIC_SITE_URL
+    : "https://seconddraftdigital.com";
+
 export const SITE_CONFIG = {
   name: "SecondDraft Digital",
   tagline: "Professional websites, built right the second time.",
   description:
     "SecondDraft Digital rebuilds and creates websites for businesses. We offer website creation and premium hosting with global performance and enterprise security.",
-  url: "https://seconddraftdigital.com",
+  url: siteUrl,
   email: "seconddraftdigital@outlook.com",
   phone: "",
   links: {

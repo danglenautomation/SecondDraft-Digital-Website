@@ -1,4 +1,4 @@
-import { SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG, SERVICES } from "@/lib/constants";
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -7,6 +7,11 @@ const organizationSchema = {
   description: SITE_CONFIG.description,
   url: SITE_CONFIG.url,
   email: SITE_CONFIG.email,
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "GB",
+  },
+  areaServed: "GB",
   sameAs: [],
 };
 
@@ -22,6 +27,30 @@ const websiteSchema = {
   },
 };
 
+const serviceCreationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: SERVICES.creation.title,
+  description: SERVICES.creation.shortDescription,
+  provider: {
+    "@type": "Organization",
+    name: SITE_CONFIG.name,
+  },
+  areaServed: "GB",
+};
+
+const serviceHostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: SERVICES.hosting.title,
+  description: SERVICES.hosting.shortDescription,
+  provider: {
+    "@type": "Organization",
+    name: SITE_CONFIG.name,
+  },
+  areaServed: "GB",
+};
+
 export function JsonLd() {
   return (
     <>
@@ -35,6 +64,18 @@ export function JsonLd() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(websiteSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceCreationSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceHostingSchema),
         }}
       />
     </>
