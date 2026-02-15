@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   tagline: "Professional websites, built right the second time.",
   description:
     "SecondDraft Digital rebuilds and creates websites for businesses. We offer website creation and premium hosting with global performance and enterprise security.",
-  url: "https://seconddraft.digital",
+  url: "https://seconddraftdigital.com",
   email: "seconddraftdigital@outlook.com",
   phone: "",
   links: {
