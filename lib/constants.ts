@@ -9,7 +9,7 @@ export const SITE_CONFIG = {
   description:
     "SecondDraft Digital rebuilds and creates websites for businesses. We offer website creation and premium hosting with global performance and enterprise security.",
   url: siteUrl,
-  email: "seconddraftdigital@outlook.com",
+  email: "daniel.glen@seconddraftdigital.com",
   phone: "",
   links: {
     home: "/",
